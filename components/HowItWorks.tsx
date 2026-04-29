@@ -4,19 +4,52 @@ import { motion } from "framer-motion";
 
 export function HowItWorks() {
   const { lang } = useLang();
-  const steps =
+
+  const pillars =
     lang === "pt"
       ? [
-          { n: "01", t: "Falas connosco", d: "Por DM, WhatsApp ou formulário. Em poucas horas voltamos com uma proposta." },
-          { n: "02", t: "Curamos", d: "Combinamos parceiros, transporte e timing. Tudo num plano simples." },
-          { n: "03", t: "Conduzimos", d: "Buscamos-te, ficamos contigo, levamos-te de volta. Sem stress, sem mapa." },
-          { n: "04", t: "Vives", d: "Tu só tens de aparecer. Nós tratamos do resto." },
+          {
+            n: "01",
+            t: "Descobrimos",
+            d: "Percorremos o Oeste à procura do que não está nos guias. Lugares, pessoas, momentos — raw e sem filtros.",
+          },
+          {
+            n: "02",
+            t: "Escrevemos",
+            d: "Cada lugar ganha uma história. Não reviews. Não listas. Narrativa de quem conhece e respeita o território.",
+          },
+          {
+            n: "03",
+            t: "Apresentamos",
+            d: "Ligamos o nosso público aos parceiros locais diretamente — sem intermédiarios, sem comissões escondidas.",
+          },
+          {
+            n: "04",
+            t: "Criamos comunidade",
+            d: "Somos uma rede viva de criadores, produtores, chefs, artistas e viajantes que amam o Oeste de Portugal.",
+          },
         ]
       : [
-          { n: "01", t: "Talk to us", d: "DM, WhatsApp or the form. We come back with a proposal within hours." },
-          { n: "02", t: "We curate", d: "We coordinate partners, transport and timing in one simple plan." },
-          { n: "03", t: "We drive", d: "We pick you up, stay with you, take you back. No stress, no map." },
-          { n: "04", t: "You live it", d: "You just show up. We handle the rest." },
+          {
+            n: "01",
+            t: "We discover",
+            d: "We roam the West looking for what's not in any guidebook. Places, people, moments — raw and unfiltered.",
+          },
+          {
+            n: "02",
+            t: "We write",
+            d: "Every place earns a story. Not reviews. Not lists. Narrative from people who know and respect the territory.",
+          },
+          {
+            n: "03",
+            t: "We introduce",
+            d: "We connect our audience directly to local partners — no middlemen, no hidden commissions.",
+          },
+          {
+            n: "04",
+            t: "We build community",
+            d: "We're a living network of creators, producers, chefs, artists and travellers who love Portugal's West Coast.",
+          },
         ];
 
   return (
@@ -24,27 +57,32 @@ export function HowItWorks() {
       <div className="container py-24 md:py-32">
         <div className="max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.22em] text-cream-50/60">
-            {lang === "pt" ? "Como funciona" : "How it works"}
+            {lang === "pt" ? "O que somos" : "What we are"}
           </p>
           <h2 className="mt-5 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
             {lang === "pt" ? (
               <>
-                Tu vens.
+                Blog. Rede local.
                 <br />
-                <span className="font-serif-display italic text-sunset-200">Nós tratamos.</span>
+                <span className="font-serif-display italic text-sunset-200">Sem filtros.</span>
               </>
             ) : (
               <>
-                You come.
+                Blog. Local network.
                 <br />
-                <span className="font-serif-display italic text-sunset-200">We handle it.</span>
+                <span className="font-serif-display italic text-sunset-200">No filters.</span>
               </>
             )}
           </h2>
+          <p className="mt-6 text-cream-50/70 text-[16px] leading-relaxed max-w-xl">
+            {lang === "pt"
+              ? "O Oeste Local é um blog de lifestyle e uma rede de parceiros no Oeste de Portugal. Não vendemos tours. Contamos histórias e apresentamos as pessoas que fazem este território ser único."
+              : "Oeste Local is a lifestyle blog and a local partner network on Portugal's West Coast. We don't sell tours. We tell stories and introduce the people who make this territory unique."}
+          </p>
         </div>
 
         <div className="mt-14 grid md:grid-cols-4 gap-6">
-          {steps.map((s, i) => (
+          {pillars.map((s, i) => (
             <motion.div
               key={s.n}
               initial={{ opacity: 0, y: 24 }}
