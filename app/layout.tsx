@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image", title: "Oeste Local" },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/brand/logo_oestelocal_icon.png" },
 };
 
 export default function RootLayout({

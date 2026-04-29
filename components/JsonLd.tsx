@@ -8,7 +8,7 @@ export function OrganizationJsonLd() {
     "@type": "Organization",
     name: "Oeste Local",
     url: BASE,
-    logo: `${BASE}/favicon.svg`,
+    logo: `${BASE}/brand/logo_oestelocal_icon.png`,
     description:
       "Blog de lifestyle sobre o Oeste de Portugal — histórias, destinos e parceiros locais na Costa de Prata (Óbidos, Peniche, Nazaré, Caldas e arredores).",
     areaServed: ["Óbidos", "Peniche", "Nazaré", "Caldas da Rainha", "Bombarral", "Baleal", "Foz do Arelho", "Carvalhal"],
