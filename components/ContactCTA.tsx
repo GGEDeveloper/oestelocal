@@ -15,40 +15,40 @@ export function ContactCTA() {
       >
         <div className="max-w-3xl">
           <p className="text-[11px] uppercase tracking-[0.22em] text-cream-50/70">
-            {lang === "pt" ? "Quando vens?" : "When are you coming?"}
+            {lang === "pt" ? "Faz parte da comunidade" : "Join the community"}
           </p>
           <h3 className="mt-5 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
             {lang === "pt" ? (
               <>
-                Diz-nos quando.
+                Conheces um sítio
                 <br />
-                <span className="font-serif-display italic text-sunset-200">Tratamos do resto.</span>
+                <span className="font-serif-display italic text-sunset-200">que devia estar aqui?</span>
               </>
             ) : (
               <>
-                Tell us when.
+                Know a place
                 <br />
-                <span className="font-serif-display italic text-sunset-200">We'll handle the rest.</span>
+                <span className="font-serif-display italic text-sunset-200">that should be here?</span>
               </>
             )}
           </h3>
           <p className="mt-5 max-w-xl text-cream-50/85 text-[16px] leading-relaxed">
             {lang === "pt"
-              ? "Pequenos grupos. Sem ementa fixa. Pensamos a tua viagem em horas, não em dias."
-              : "Small groups. No fixed menu. We design your trip in hours, not days."}
+              ? "Somos uma rede aberta. Se és um negócio local, criador ou só conheces um lugar escondido no Oeste — fala connosco. Respondemos sempre."
+              : "We're an open network. If you're a local business, a creator, or you just know a hidden spot in the West — reach out. We always reply."}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/contacto" className="btn-primary bg-cream-50 text-ocean-900 hover:bg-sunset-200">
-              {lang === "pt" ? "Começar conversa" : "Start a conversation"}
+              {lang === "pt" ? "Fala connosco" : "Get in touch"}
               <span aria-hidden>→</span>
             </Link>
             <a
               className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50/10"
-              href="https://wa.me/351000000000"
+              href="https://instagram.com/oestelocal"
               target="_blank"
               rel="noopener"
             >
-              WhatsApp
+              {lang === "pt" ? "Seguir no Instagram" : "Follow on Instagram"}
             </a>
           </div>
         </div>
