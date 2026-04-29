@@ -8,7 +8,7 @@ type Dict = { [k: string]: string | Dict };
 const dict: Record<Lang, Dict> = {
   pt: {
     nav: {
-      experiencias: "Experiências",
+      experiencias: "Descobrir",
       destinos: "Destinos",
       parceiros: "Parceiros",
       diario: "Diário",
@@ -16,7 +16,7 @@ const dict: Record<Lang, Dict> = {
       contacto: "Contacto",
     },
     cta: {
-      primary: "Reservar a tua viagem",
+      primary: "Explorar o Oeste",
       whatsapp: "Falar pelo WhatsApp",
       instagram: "Ver no Instagram",
       explore: "Explorar",
@@ -24,10 +24,10 @@ const dict: Record<Lang, Dict> = {
       back: "Voltar",
     },
     hero: {
-      eyebrow: "Experiências no Oeste — Costa de Prata",
+      eyebrow: "Blog de lifestyle — Costa de Prata, Portugal",
       title: "O Oeste que os guias\nnão sabem que existe.",
       lede:
-        "Curadoria emocional de lugares, pessoas e momentos entre Óbidos, Peniche, Nazaré e Caldas da Rainha. Tratamos de tudo — só tens de aparecer.",
+        "Lugares escondidos, pessoas reais e momentos que não cabem num roteiro. Entre Óbidos, Peniche, Nazaré e Caldas da Rainha — contamos o Oeste como ele é.",
       stat1: "27 lugares secretos",
       stat2: "8 parceiros locais",
       stat3: "100% raw, sem filtros",
@@ -35,46 +35,51 @@ const dict: Record<Lang, Dict> = {
     categories: {
       title: "Vem para sentir.\nNão para cumprir uma checklist.",
       lede:
-        "Não vendemos tours. Vendemos quatro maneiras de habitar o Oeste — escolhe a tua.",
-      desacelerar: { name: "Desacelerar", text: "Spa, banhos, vinhas, lentidão." },
+        "Quatro formas de habitar o Oeste — escolhe a que ressoa contigo e descobre o que não está nos guias.",
+      desacelerar: { name: "Desacelerar", text: "SPA, banhos termais, vinhas, lentidão." },
       descobrir: { name: "Descobrir", text: "Trilhos, falésias, sítios sem sinal." },
       mergulhar: { name: "Mergulhar", text: "Surf, ondas, oceano frio." },
       celebrar: { name: "Celebrar", text: "Concertos, festivais, mesas longas." },
     },
-    experiences: {
-      title: "Experiências em curadoria",
+    places: {
+      title: "Lugares & momentos",
       lede:
-        "Cada experiência é desenhada com um parceiro local. Pequenos grupos. Sem pressa.",
+        "Curadoria editorial de sítios, pessoas e experiências no Oeste de Portugal.",
       seeAll: "Ver tudo",
     },
     partners: {
       title: "As pessoas por trás dos sítios",
       lede:
-        "Não somos uma plataforma. Conhecemos cada parceiro pelo nome — e tu também vais conhecer.",
+        "Não somos uma plataforma. Conhecemos cada parceiro pelo nome — e apresentamo-los a ti.",
     },
     feed: {
       title: "Diário de campo",
       lede: "Direto do nosso Instagram, atualizado em tempo real.",
     },
     contact: {
-      title: "Diz-nos quando vens.",
+      title: "Fala connosco.",
       lede:
-        "Respondemos em poucas horas. Tratamos de transporte, reservas e dos sítios certos para ti.",
+        "Tens uma dica, queres ser parceiro, ou só queres saber mais sobre o Oeste? Estamos aqui.",
       name: "Nome",
       email: "Email",
-      message: "O que procuras?",
+      message: "O que tens em mente?",
       send: "Enviar",
       sending: "A enviar…",
-      sent: "Recebido — falamos contigo em breve.",
+      sent: "Recebido — respondemos em breve.",
+    },
+    about: {
+      title: "Sobre o Oeste Local",
+      lede:
+        "Somos um blog de lifestyle e uma rede de parceiros locais no Oeste de Portugal. Descobrimos, escrevemos e apresentamos — o transporte fica ao teu critério, mas se precisares, temos uma app para isso.",
     },
     footer: {
-      tagline: "Experiências no Oeste de Portugal.",
+      tagline: "Lifestyle e descoberta no Oeste de Portugal.",
       rights: "Todos os direitos reservados.",
     },
   },
   en: {
     nav: {
-      experiencias: "Experiences",
+      experiencias: "Discover",
       destinos: "Destinations",
       parceiros: "Partners",
       diario: "Journal",
@@ -82,7 +87,7 @@ const dict: Record<Lang, Dict> = {
       contacto: "Contact",
     },
     cta: {
-      primary: "Plan your trip",
+      primary: "Explore the West",
       whatsapp: "Chat on WhatsApp",
       instagram: "See on Instagram",
       explore: "Explore",
@@ -90,10 +95,10 @@ const dict: Record<Lang, Dict> = {
       back: "Back",
     },
     hero: {
-      eyebrow: "Experiences on Portugal's West Coast",
+      eyebrow: "Lifestyle blog — Silver Coast, Portugal",
       title: "The West Coast Portugal\ndoesn't put on the map.",
       lede:
-        "Emotional curation of places, people and moments between Óbidos, Peniche, Nazaré and Caldas da Rainha. We take care of everything — you just show up.",
+        "Hidden places, real people and moments that don't fit in a guidebook. Between Óbidos, Peniche, Nazaré and Caldas da Rainha — we tell the West as it is.",
       stat1: "27 secret spots",
       stat2: "8 local partners",
       stat3: "100% raw, no filters",
@@ -101,40 +106,45 @@ const dict: Record<Lang, Dict> = {
     categories: {
       title: "Come to feel.\nNot to tick a checklist.",
       lede:
-        "We don't sell tours. We offer four ways to inhabit the West — pick yours.",
-      desacelerar: { name: "Slow down", text: "Spa, baths, vineyards, slowness." },
+        "Four ways to inhabit the West — choose the one that resonates and discover what's not in any guidebook.",
+      desacelerar: { name: "Slow down", text: "Spa, thermal baths, vineyards, slowness." },
       descobrir: { name: "Discover", text: "Trails, cliffs, places off-grid." },
       mergulhar: { name: "Dive in", text: "Surf, swells, the cold Atlantic." },
       celebrar: { name: "Celebrate", text: "Concerts, festivals, long tables." },
     },
-    experiences: {
-      title: "Curated experiences",
+    places: {
+      title: "Places & moments",
       lede:
-        "Each experience is designed with a local partner. Small groups. No rush.",
+        "Editorial curation of spots, people and experiences on Portugal's West Coast.",
       seeAll: "See all",
     },
     partners: {
       title: "The people behind the places",
       lede:
-        "We're not a marketplace. We know every partner by name — and so will you.",
+        "We're not a marketplace. We know every partner by name — and we'll introduce you.",
     },
     feed: {
       title: "Field journal",
       lede: "Live from our Instagram, updating in real time.",
     },
     contact: {
-      title: "Tell us when you're coming.",
+      title: "Talk to us.",
       lede:
-        "We reply within a few hours. Transport, bookings, the right spots — handled.",
+        "Got a tip, want to become a partner, or just want to know more about the West? We're here.",
       name: "Name",
       email: "Email",
-      message: "What are you looking for?",
+      message: "What's on your mind?",
       send: "Send",
       sending: "Sending…",
-      sent: "Got it — we'll be in touch shortly.",
+      sent: "Got it — we'll be in touch.",
+    },
+    about: {
+      title: "About Oeste Local",
+      lede:
+        "We're a lifestyle blog and a network of local partners on Portugal's West Coast. We discover, write and introduce — transport is up to you, but if you need it, we have an app for that.",
     },
     footer: {
-      tagline: "Experiences on Portugal's West Coast.",
+      tagline: "Lifestyle & discovery on Portugal's West Coast.",
       rights: "All rights reserved.",
     },
   },
