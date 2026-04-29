@@ -15,7 +15,7 @@ export function ContactCTA() {
       >
         <div className="max-w-3xl">
           <p className="text-[11px] uppercase tracking-[0.22em] text-cream-50/70">
-            {lang === "pt" ? "Faz parte da comunidade" : "Join the community"}
+            {lang === "pt" ? "O Oeste espera" : "The West is waiting"}
           </p>
           <h3 className="mt-5 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
             {lang === "pt" ? (
@@ -48,7 +48,7 @@ export function ContactCTA() {
               target="_blank"
               rel="noopener"
             >
-              {lang === "pt" ? "Seguir no Instagram" : "Follow on Instagram"}
+              @oestelocal
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ export type Destination = {
   tagline: Bilingual;
   intro: Bilingual;
   highlights: Bilingual[];
-  image: string; // unsplash placeholder for now
+  image: string;
 };
 
 export type Partner = {
@@ -20,7 +20,7 @@ export type Partner = {
   name: string;
   role: Bilingual;
   city: string;
-  instagram: string; // handle, no @
+  instagram: string;
   description: Bilingual;
   category: "Hospedagem" | "Gastronomia" | "Bem-estar" | "Cultura" | "Arte" | "Vinho";
   image: string;
@@ -38,15 +38,12 @@ export type Experience = {
   short: Bilingual;
   story: Bilingual;
   duration: Bilingual;
-  group: Bilingual;
-  destination: string; // slug
-  partner?: string; // slug
+  destination: string;
+  partner?: string;
   category: ExperienceCategory;
   image: string;
 };
 
-// Imagens locais (Wikimedia Commons — atribuição em /sobre).
-// Substituir por fotografia editorial @oestelocal quando disponível.
 const IMG = {
   obidos: "/img/obidos.jpg",
   peniche: "/img/peniche.jpg",
@@ -77,14 +74,14 @@ export const destinations: Destination[] = [
       en: "Medieval village, ginja, festivals at night.",
     },
     intro: {
-      pt: "Muralhas brancas com janelas azuis e amarelas, livrarias dentro de igrejas, ruas de pedra que cheiram a chocolate quando chega o festival. À noite, o castelo perde o turismo e ganha música — é aí que entramos.",
-      en: "White walls with blue and yellow windows, bookstores inside churches, stone alleys smelling of chocolate during the festival. At night, the castle sheds the tourists and finds music — that's our cue.",
+      pt: "Muralhas brancas com janelas azuis e amarelas, livrarias dentro de igrejas, ruas de pedra que cheiram a chocolate quando chega o festival. À noite, o castelo perde o turismo e ganha música — é aí que as coisas acontecem a sério.",
+      en: "White walls with blue and yellow windows, bookstores inside churches, stone alleys smelling of chocolate during the festival. At night, the castle sheds the tourists and finds music — that's when things get real.",
     },
     highlights: [
       { pt: "Festival Latitudes (16-19.04.26)", en: "Latitudes Festival (Apr 16-19, 2026)" },
       { pt: "Concertos noturnos no castelo", en: "Night concerts at the castle" },
       { pt: "Livraria Santiago", en: "Santiago bookstore-church" },
-      { pt: "Caminhos do mural de @cmarie.pt", en: "Walks of @cmarie.pt's mural" },
+      { pt: "Murais de @cmarie.pt", en: "@cmarie.pt's murals" },
     ],
     image: IMG.obidos,
   },
@@ -97,14 +94,14 @@ export const destinations: Destination[] = [
       en: "Supertubos, Berlengas, fish straight from the dock.",
     },
     intro: {
-      pt: "A península que aponta para o Atlântico como um cais. A ondulação é internacional, mas há uma manhã específica — luz baixa, vento parado — em que o mar fica de outro planeta. É aí que vamos.",
-      en: "The peninsula that points into the Atlantic like a pier. The swell is world class, but there's one specific morning — low light, no wind — when the ocean turns alien. That's when we go.",
+      pt: "A península que aponta para o Atlântico como um cais. A ondulação é internacional, mas há uma manhã específica — luz baixa, vento parado — em que o mar fica de outro planeta.",
+      en: "The peninsula that points into the Atlantic like a pier. The swell is world class, but there's one specific morning — low light, no wind — when the ocean turns alien.",
     },
     highlights: [
       { pt: "Supertubos (MEO Rip Curl Pro)", en: "Supertubos (MEO Rip Curl Pro)" },
       { pt: "Ilhas Berlengas (Reserva UNESCO)", en: "Berlengas islands (UNESCO Reserve)" },
-      { pt: "Manhã de surf com instrutor local", en: "Sunrise surf with a local coach" },
-      { pt: "Almoço no porto, sem ementa", en: "Harbor lunch, no menu, just the catch" },
+      { pt: "Surf com instrutor local", en: "Surf with a local coach" },
+      { pt: "Almoço no porto, peixe do dia", en: "Harbor lunch, catch of the day" },
     ],
     image: IMG.peniche,
   },
@@ -117,8 +114,8 @@ export const destinations: Destination[] = [
       en: "The waves that rewrote world surfing.",
     },
     intro: {
-      pt: "O farol em cima da falésia onde se vêm partir gigantes do tamanho de prédios. No verão é vila piscatória, em Outubro é teatro. Levamos-te quando o mar faz sentido.",
-      en: "The lighthouse atop the cliff where you watch building-sized giants break. In summer, a fishing village; in October, a theater. We take you when the ocean makes sense.",
+      pt: "O farol em cima da falésia onde se vêm partir gigantes do tamanho de prédios. No verão é vila piscatória, em Outubro é teatro.",
+      en: "The lighthouse atop the cliff where you watch building-sized giants break. In summer, a fishing village; in October, a theater.",
     },
     highlights: [
       { pt: "Farol e Forte de São Miguel", en: "São Miguel lighthouse & fort" },
@@ -136,7 +133,7 @@ export const destinations: Destination[] = [
       en: "Ceramics, thermal baths and street art.",
     },
     intro: {
-      pt: "A cidade onde o Bordallo fez história e onde a Sandra do SilverCoast SPA reescreve a tarde com vapor e silêncio. Nos azulejos da feira, na ginja do mercado, na cor inventada dos guarda-chuvas — Caldas é diferente.",
+      pt: "A cidade onde o Bordallo fez história e onde a Sandra do SilverCoast SPA reescreve a tarde com vapor e silêncio. Nos azulejos da feira, na ginja do mercado, na cor dos guarda-chuvas — Caldas é diferente.",
       en: "The city where Bordallo made history and where Sandra at SilverCoast SPA rewrites your afternoon with steam and silence. In the market tiles, the ginja stand, the impossible colors of hanging umbrellas — Caldas is different.",
     },
     highlights: [
@@ -175,11 +172,11 @@ export const destinations: Destination[] = [
       en: "Surf peninsula with a village heart.",
     },
     intro: {
-      pt: "Casas brancas, ondas dos dois lados, e bares onde o pôr-do-sol é a banda sonora. Vacation mode: ON.",
-      en: "White houses, waves on both sides, bars where the sunset is the soundtrack. Vacation mode: ON.",
+      pt: "Casas brancas, ondas dos dois lados, e bares onde o pôr-do-sol é a banda sonora.",
+      en: "White houses, waves on both sides, bars where the sunset is the soundtrack.",
     },
     highlights: [
-      { pt: "Lições de surf para iniciantes e intermédios", en: "Surf lessons — beginners & intermediate" },
+      { pt: "Surf para todos os níveis", en: "Surf for all levels" },
       { pt: "Pôr-do-sol no istmo", en: "Sunset at the isthmus" },
       { pt: "Mariscada no Baleal Wave", en: "Seafood at Baleal Wave" },
     ],
@@ -201,7 +198,7 @@ export const destinations: Destination[] = [
       { pt: "Buddha Eden — 35 ha de esculturas", en: "Buddha Eden — 35 ha of sculpture park" },
       { pt: "Tables Carvalhal — cozinha de conforto", en: "Tables Carvalhal — comfort cooking" },
       { pt: "Flat23 — boutique apartment", en: "Flat23 — boutique apartment" },
-      { pt: "Visitas a vinhas e licor de pera", en: "Vineyard visits & pear liqueur" },
+      { pt: "Vinhas e licor de pera Rocha", en: "Vineyards & Pera Rocha liqueur" },
     ],
     image: IMG.bombarral,
   },
@@ -228,8 +225,8 @@ export const partners: Partner[] = [
     city: "Carvalhal, Bombarral",
     instagram: "tablescarvalhal",
     description: {
-      pt: "Cozinha portuguesa de conforto. O chef sai da cozinha para te conhecer. Avaliação 9.4.",
-      en: "Portuguese comfort cooking. The chef walks out to meet you. Rated 9.4.",
+      pt: "Cozinha portuguesa de conforto. O chef sai da cozinha para te conhecer.",
+      en: "Portuguese comfort cooking. The chef walks out to meet you.",
     },
     category: "Gastronomia",
     image: IMG.tables,
@@ -241,8 +238,8 @@ export const partners: Partner[] = [
     city: "Caldas da Rainha",
     instagram: "silvercoastspa",
     description: {
-      pt: "Sandra Costa transformou um espaço pequeno num refúgio sensorial. Reserva é só por nós.",
-      en: "Sandra Costa turned a tiny space into a sensory refuge. Booking only through us.",
+      pt: "Sandra Costa transformou um espaço pequeno num refúgio sensorial. Marca directamente no Instagram deles.",
+      en: "Sandra Costa turned a tiny space into a sensory refuge. Book directly on their Instagram.",
     },
     category: "Bem-estar",
     image: IMG.spa,
@@ -267,8 +264,8 @@ export const partners: Partner[] = [
     city: "Sintra · em digressão",
     instagram: "kumpaniaalgazarra",
     description: {
-      pt: "Cigana, árabe, ska, latina. 10.8K seguidores. Conjugamos a tua viagem com os concertos deles.",
-      en: "Gypsy, Arabic, ska, Latin. 10.8K followers. We sync your trip with their tour dates.",
+      pt: "Cigana, árabe, ska, latina. 10.8K seguidores. Acompanhamos os seus concertos no Oeste.",
+      en: "Gypsy, Arabic, ska, Latin. 10.8K followers. We follow their West Coast dates.",
     },
     category: "Cultura",
     image: IMG.concerto,
@@ -319,15 +316,14 @@ export const experiences: Experience[] = [
     slug: "spa-secreto-caldas",
     title: { pt: "SPA secreto em Caldas", en: "The hidden spa in Caldas" },
     short: {
-      pt: "Reset sensorial com a Sandra. Recolha em Lisboa ou Óbidos.",
-      en: "Sensory reset with Sandra. Pickup in Lisbon or Óbidos.",
+      pt: "O refúgio da Sandra. Vapor, silêncio, e dois horas em que ninguém te interrompe.",
+      en: "Sandra's refuge. Steam, silence, and two hours where nobody interrupts you.",
     },
     story: {
-      pt: "Buscamos-te ao alojamento. Conduzimos pela estrada das vinhas. Quando chegas, já está tudo pronto: vapor, silêncio e duas horas em que ninguém te interrompe. Voltamos buscar-te.",
-      en: "We pick you up at your stay. Drive through the vineyard road. When you arrive, everything is ready: steam, silence and two hours where nobody interrupts you. Then we drive you back.",
+      pt: "A Sandra tem o espaço mais calmo de Caldas. Não está em nenhuma lista de viagens. Sem barulho, sem agenda. Entras, respiras, sais diferente. Marca directamente com ela no @silvercoastspa.",
+      en: "Sandra has the calmest space in Caldas. It's not on any travel list. No noise, no agenda. You go in, breathe, come out different. Book directly with her at @silvercoastspa.",
     },
     duration: { pt: "Meio-dia", en: "Half day" },
-    group: { pt: "1–4 pessoas", en: "1–4 people" },
     destination: "caldas-da-rainha",
     partner: "silvercoast-spa",
     category: "desacelerar",
@@ -335,17 +331,16 @@ export const experiences: Experience[] = [
   },
   {
     slug: "supertubos-sunrise",
-    title: { pt: "Supertubos ao amanhecer", en: "Supertubos sunrise surf" },
+    title: { pt: "Supertubos ao amanhecer", en: "Supertubos at sunrise" },
     short: {
-      pt: "Aula com instrutor local quando o mar acorda perfeito.",
-      en: "Lesson with a local coach when the ocean wakes up perfect.",
+      pt: "A praia onde o Rip Curl Pro acontece. De manhã cedo, antes de toda a gente.",
+      en: "The beach where Rip Curl Pro happens. Early morning, before everyone else.",
     },
     story: {
-      pt: "Mensagem na noite anterior: amanhã às 6h45. Vem-te buscar uma carrinha. Pranchas dentro. Aula privada na praia onde o MEO Rip Curl Pro acontece. Pequeno-almoço a seguir, no porto, com pescadores.",
-      en: "Text the night before: tomorrow at 6:45 a.m. A van picks you up. Boards inside. Private session on the beach where MEO Rip Curl Pro is held. Breakfast next, at the harbor, with fishermen.",
+      pt: "Supertubos de manhã cedo, quando a luz está baixa e o vento ainda não acordou. O instrutor é local e conhece cada onda. Daqui vai-se ao porto comer peixe com pescadores.",
+      en: "Supertubos in the early morning, when the light is low and the wind hasn't woken up. The instructor is local and knows every wave. From here, head to the harbor for fish with fishermen.",
     },
-    duration: { pt: "Manhã (4h)", en: "Morning (4h)" },
-    group: { pt: "1–6 pessoas", en: "1–6 people" },
+    duration: { pt: "Manhã", en: "Morning" },
     destination: "peniche",
     category: "mergulhar",
     image: IMG.surf,
@@ -358,11 +353,10 @@ export const experiences: Experience[] = [
       en: "The 17K-view reel — and what it didn't tell you.",
     },
     story: {
-      pt: "Caminho fora do mapa, a meia hora de Óbidos. Termina com café no Tables Carvalhal. Dormida no Flat23, se quiseres ficar.",
-      en: "Off-map trail, 30 minutes from Óbidos. Ends with coffee at Tables Carvalhal. Stay over at Flat23 if you fall in love.",
+      pt: "Um caminho fora do mapa, a 30 minutos de Óbidos, que parece outro planeta. O reel fez 17K views mas não chega a mostrar metade. Acaba com café no @tablescarvalhal. O @flat23westcoast está ali ao lado se quiseres ficar.",
+      en: "An off-map trail 30 minutes from Óbidos that feels like another planet. The reel hit 17K views but barely shows half of it. Ends with coffee at @tablescarvalhal. @flat23westcoast is right there if you want to stay.",
     },
     duration: { pt: "Dia inteiro", en: "Full day" },
-    group: { pt: "2–6 pessoas", en: "2–6 people" },
     destination: "foz-do-arelho",
     partner: "tables-carvalhal",
     category: "descobrir",
@@ -372,15 +366,14 @@ export const experiences: Experience[] = [
     slug: "noite-no-castelo-obidos",
     title: { pt: "Noite no castelo — Latitudes", en: "A night at the castle — Latitudes" },
     short: {
-      pt: "Concerto da Kumpania Algazarra dentro de muralhas medievais.",
-      en: "Kumpania Algazarra concert inside medieval walls.",
+      pt: "Kumpania Algazarra dentro de muralhas medievais. Isto não se explica.",
+      en: "Kumpania Algazarra inside medieval walls. This you can't describe.",
     },
     story: {
-      pt: "Jantar prévio em Óbidos. Bilhete e transfer incluídos. Levamos-te a casa quando acabar — sem stress, sem condutor designado.",
-      en: "Pre-show dinner in Óbidos. Ticket and transfer included. We drive you home when it ends — no stress, no designated driver.",
+      pt: "Festival Latitudes, Óbidos. A Kumpania dentro do castelo é uma daquelas coisas que não se explica a quem não esteve. Bilhetes em @latitudesobidos.",
+      en: "Latitudes Festival, Óbidos. Kumpania inside the castle is one of those things you can't explain to anyone who wasn't there. Tickets at @latitudesobidos.",
     },
     duration: { pt: "Tarde + noite", en: "Afternoon + night" },
-    group: { pt: "2–8 pessoas", en: "2–8 people" },
     destination: "obidos",
     partner: "latitudes-obidos",
     category: "celebrar",
@@ -394,11 +387,10 @@ export const experiences: Experience[] = [
       en: "Wheel, dirty hands, the piece you take home.",
     },
     story: {
-      pt: "Workshop de duas horas no atelier. Levas a peça depois de cozida — enviamos para a tua morada se já tiveres voltado.",
-      en: "Two-hour studio workshop. We send your piece after firing — to wherever you've gone home to.",
+      pt: "Workshop de duas horas no atelier da @lojadoca_lho. Mãos na roda, barro, conversa devagar. Enviam a peça para onde estiveres depois de cozida.",
+      en: "Two hours at @lojadoca_lho's studio. Hands on the wheel, clay, slow conversation. They ship the piece to wherever you are after firing.",
     },
-    duration: { pt: "2h", en: "2h" },
-    group: { pt: "2–6 pessoas", en: "2–6 people" },
+    duration: { pt: "2 horas", en: "2 hours" },
     destination: "caldas-da-rainha",
     partner: "loja-do-calho",
     category: "desacelerar",
@@ -406,17 +398,16 @@ export const experiences: Experience[] = [
   },
   {
     slug: "vinhas-escondidas",
-    title: { pt: "Vinhas escondidas", en: "Hidden vineyards" },
+    title: { pt: "Vinhas escondidas do Oeste", en: "Hidden vineyards of the West" },
     short: {
-      pt: "Pera Rocha, ginja, vinho do Oeste — sem turismo.",
-      en: "Pera Rocha, ginja, wines of the West — no tourism.",
+      pt: "Pera Rocha DOP, ginja, vinho do Oeste. Fora de qualquer rota turística.",
+      en: "Pera Rocha DOP, ginja, West wines. Off every tourist route.",
     },
     story: {
-      pt: "Visita a três produtores que não estão em nenhuma rota. Provas longas. Conversa devagar. Voltamos a Lisboa quando quiseres.",
-      en: "Three producers who aren't on any route. Long tastings. Slow conversation. We drive back to Lisbon whenever you say so.",
+      pt: "Três produtores que não estão em nenhuma rota. A pera Rocha tem DOP e o licor do @peranoperal é a sério. Vai-se devagar, sem agenda.",
+      en: "Three producers off every tourist route. Pera Rocha has DOP status and @peranoperal's liqueur is the real thing. You go slowly, no agenda.",
     },
     duration: { pt: "Meio-dia", en: "Half day" },
-    group: { pt: "2–4 pessoas", en: "2–4 people" },
     destination: "bombarral",
     partner: "pera-no-peral",
     category: "descobrir",

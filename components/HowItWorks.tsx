@@ -5,50 +5,50 @@ import { motion } from "framer-motion";
 export function HowItWorks() {
   const { lang } = useLang();
 
-  const pillars =
+  const stories =
     lang === "pt"
       ? [
           {
-            n: "01",
-            t: "Descobrimos",
-            d: "Percorremos o Oeste à procura do que não está nos guias. Lugares, pessoas, momentos — raw e sem filtros.",
+            handle: "@silvercoastspa",
+            title: "O refúgio da Sandra",
+            body: "Transformou um espaço pequeno em Caldas num lugar que não se esquece. Silêncio a sério.",
           },
           {
-            n: "02",
-            t: "Escrevemos",
-            d: "Cada lugar ganha uma história. Não reviews. Não listas. Narrativa de quem conhece e respeita o território.",
+            handle: "@oestelocal · 17K views",
+            title: "O trilho que parou Portugal",
+            body: "Um caminho fora do mapa. A 30 minutos de Óbidos. O reel de 17K views não te conta metade.",
           },
           {
-            n: "03",
-            t: "Apresentamos",
-            d: "Ligamos o nosso público aos parceiros locais diretamente — sem intermédiarios, sem comissões escondidas.",
+            handle: "@tablescarvalhal",
+            title: "Carvalhal tem uma mesa",
+            body: "O chef sai da cozinha para te perguntar como correu o dia. Isto não se inventa.",
           },
           {
-            n: "04",
-            t: "Criamos comunidade",
-            d: "Somos uma rede viva de criadores, produtores, chefs, artistas e viajantes que amam o Oeste de Portugal.",
+            handle: "@kumpaniaalgazarra · Latitudes",
+            title: "Muralhas medievais com folk cigano",
+            body: "Festival Latitudes, Óbidos. A Kumpania dentro do castelo é uma coisa que não se explica.",
           },
         ]
       : [
           {
-            n: "01",
-            t: "We discover",
-            d: "We roam the West looking for what's not in any guidebook. Places, people, moments — raw and unfiltered.",
+            handle: "@silvercoastspa",
+            title: "Sandra's refuge",
+            body: "She turned a small space in Caldas into a place you don't forget. Real silence.",
           },
           {
-            n: "02",
-            t: "We write",
-            d: "Every place earns a story. Not reviews. Not lists. Narrative from people who know and respect the territory.",
+            handle: "@oestelocal · 17K views",
+            title: "The trail that stopped people",
+            body: "An off-map path 30 minutes from Óbidos. The 17K-view reel doesn't tell half of it.",
           },
           {
-            n: "03",
-            t: "We introduce",
-            d: "We connect our audience directly to local partners — no middlemen, no hidden commissions.",
+            handle: "@tablescarvalhal",
+            title: "Carvalhal has a table",
+            body: "The chef walks out of the kitchen to ask how your day went. You can't make this up.",
           },
           {
-            n: "04",
-            t: "We build community",
-            d: "We're a living network of creators, producers, chefs, artists and travellers who love Portugal's West Coast.",
+            handle: "@kumpaniaalgazarra · Latitudes",
+            title: "Medieval walls with gypsy folk",
+            body: "Latitudes Festival, Óbidos. Kumpania inside the castle is something you can't describe.",
           },
         ];
 
@@ -57,20 +57,24 @@ export function HowItWorks() {
       <div className="container py-24 md:py-32">
         <div className="max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.22em] text-cream-50/60">
-            {lang === "pt" ? "O que somos" : "What we are"}
+            {lang === "pt" ? "Histórias do Oeste" : "Stories from the West"}
           </p>
           <h2 className="mt-5 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
             {lang === "pt" ? (
               <>
-                Blog. Rede local.
+                Momentos que vivemos.
                 <br />
-                <span className="font-serif-display italic text-sunset-200">Sem filtros.</span>
+                <span className="font-serif-display italic text-sunset-200">
+                  Que queres viver.
+                </span>
               </>
             ) : (
               <>
-                Blog. Local network.
+                Moments we lived.
                 <br />
-                <span className="font-serif-display italic text-sunset-200">No filters.</span>
+                <span className="font-serif-display italic text-sunset-200">
+                  That you'll want to live.
+                </span>
               </>
             )}
           </h2>
@@ -81,19 +85,21 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-4 gap-6">
-          {pillars.map((s, i) => (
+        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stories.map((s, i) => (
             <motion.div
-              key={s.n}
+              key={s.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: i * 0.08 }}
               className="border-t border-cream-50/15 pt-5"
             >
-              <div className="font-serif-display italic text-sunset-200 text-[42px] leading-none">{s.n}</div>
-              <div className="mt-3 font-display text-[20px]">{s.t}</div>
-              <p className="mt-2 text-[14px] text-cream-50/70 leading-relaxed">{s.d}</p>
+              <div className="text-[11px] uppercase tracking-[0.18em] text-sunset-200/80 mb-3">
+                {s.handle}
+              </div>
+              <div className="font-display text-[20px] leading-tight">{s.title}</div>
+              <p className="mt-2 text-[14px] text-cream-50/70 leading-relaxed">{s.body}</p>
             </motion.div>
           ))}
         </div>

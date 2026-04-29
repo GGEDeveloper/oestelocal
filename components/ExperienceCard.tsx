@@ -28,16 +28,19 @@ export function ExperienceCard({ e, priority = false }: { e: Experience; priorit
           className="object-cover transition duration-700 group-hover:scale-[1.04]"
         />
         <div className="absolute inset-x-0 bottom-0 p-4 flex justify-between text-[11px] uppercase tracking-[0.16em] text-cream-50">
-          <span className="bg-ink/65 backdrop-blur-sm rounded-full px-3 py-1">{labels[e.category][lang]}</span>
-          <span className="bg-ink/65 backdrop-blur-sm rounded-full px-3 py-1">{e.duration[lang]}</span>
+          <span className="bg-ink/65 backdrop-blur-sm rounded-full px-3 py-1">
+            {labels[e.category][lang]}
+          </span>
+          <span className="bg-ink/65 backdrop-blur-sm rounded-full px-3 py-1">
+            {e.duration[lang]}
+          </span>
         </div>
       </div>
       <div className="p-5">
         <h3 className="font-display text-[22px] leading-tight tracking-tightish">{e.title[lang]}</h3>
         <p className="mt-2 text-[14px] text-ink/70 leading-relaxed">{e.short[lang]}</p>
-        <div className="mt-4 flex items-center justify-between text-[12px] text-ink/55 uppercase tracking-[0.16em]">
-          <span>{e.group[lang]}</span>
-          <span className="link-under">{lang === "pt" ? "Ver" : "View"} →</span>
+        <div className="mt-4 flex justify-end text-[12px] text-ink/55 uppercase tracking-[0.16em]">
+          <span className="link-under">{lang === "pt" ? "Ler mais" : "Read more"} →</span>
         </div>
       </div>
     </Link>
