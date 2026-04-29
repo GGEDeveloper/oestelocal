@@ -55,7 +55,7 @@ export default async function PartnerDetail({ params }: { params: Promise<{ slug
               @{p.instagram}
             </a>
             <Link href="/contacto" className="btn-ghost">
-              Reservar via Oeste Local
+              Dica ou atualização para o blog →
             </Link>
           </div>
         </div>

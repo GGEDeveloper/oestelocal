@@ -20,26 +20,30 @@ export function ContactCTA() {
           <h3 className="mt-5 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
             {lang === "pt" ? (
               <>
-                Conheces um sítio
+                Vem partilhar
                 <br />
-                <span className="font-serif-display italic text-sunset-200">que devia estar aqui?</span>
+                <span className="font-serif-display italic text-sunset-200">
+                  o Oeste connosco.
+                </span>
               </>
             ) : (
               <>
-                Know a place
+                Come share
                 <br />
-                <span className="font-serif-display italic text-sunset-200">that should be here?</span>
+                <span className="font-serif-display italic text-sunset-200">
+                  the West with us.
+                </span>
               </>
             )}
           </h3>
           <p className="mt-5 max-w-xl text-cream-50/85 text-[16px] leading-relaxed">
             {lang === "pt"
-              ? "Somos uma rede aberta. Se és um negócio local, criador ou só conheces um lugar escondido no Oeste — fala connosco. Respondemos sempre."
-              : "We're an open network. If you're a local business, a creator, or you just know a hidden spot in the West — reach out. We always reply."}
+              ? "Conta-nos o que descobriste ou o que procuras. Parceiros, sítios, histórias — estamos aqui."
+              : "Tell us what you found or what you're looking for. Partners, places, stories — we're here."}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/contacto" className="btn-primary bg-cream-50 text-ocean-900 hover:bg-sunset-200">
-              {lang === "pt" ? "Fala connosco" : "Get in touch"}
+              {lang === "pt" ? "Começar conversa" : "Start a conversation"}
               <span aria-hidden>→</span>
             </Link>
             <a

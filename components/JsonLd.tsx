@@ -5,12 +5,12 @@ const BASE = "https://oestelocal.com";
 export function OrganizationJsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
+    "@type": "Organization",
     name: "Oeste Local",
     url: BASE,
     logo: `${BASE}/favicon.svg`,
     description:
-      "Curadoria de experiências autênticas no Oeste de Portugal — Óbidos, Peniche, Nazaré, Caldas da Rainha, Foz do Arelho, Baleal, Bombarral.",
+      "Blog de lifestyle sobre o Oeste de Portugal — histórias, destinos e parceiros locais na Costa de Prata (Óbidos, Peniche, Nazaré, Caldas e arredores).",
     areaServed: ["Óbidos", "Peniche", "Nazaré", "Caldas da Rainha", "Bombarral", "Baleal", "Foz do Arelho", "Carvalhal"],
     sameAs: ["https://instagram.com/oestelocal"],
     address: {

@@ -6,7 +6,7 @@ import { ExperiencesGrid } from "./ExperiencesGrid";
 export const metadata: Metadata = {
   title: "Experiências",
   description:
-    "Curadoria de experiências autênticas no Oeste de Portugal — surf, gastronomia, bem-estar, cultura e natureza.",
+    "Histórias e momentos no Oeste de Portugal — surf, gastronomia, bem-estar, cultura e natureza, em parceria com quem cá vive.",
 };
 
 export default function ExperiencesIndex() {
@@ -15,11 +15,11 @@ export default function ExperiencesIndex() {
       <div className="max-w-3xl">
         <p className="pill">Experiências</p>
         <h1 className="mt-6 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
-          Cada experiência é desenhada com{" "}
-          <span className="font-serif-display italic text-ocean-600">um parceiro local</span>.
+          Cada história nasce com{" "}
+          <span className="font-serif-display italic text-ocean-600">um parceiro que conhecemos</span>.
         </h1>
         <p className="mt-6 text-ink/70 max-w-xl text-[16px] leading-relaxed">
-          Pequenos grupos. Sem ementa fixa. Filtra por categoria — ou começa pelo que te chama hoje.
+          Isto é arquivo editorial, não catálogo de pacotes. Filtra por categoria — ou segue o que te chama hoje.
         </p>
       </div>
       <Suspense fallback={<div className="mt-12 h-32" />}>

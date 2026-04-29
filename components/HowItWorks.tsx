@@ -78,11 +78,6 @@ export function HowItWorks() {
               </>
             )}
           </h2>
-          <p className="mt-6 text-cream-50/70 text-[16px] leading-relaxed max-w-xl">
-            {lang === "pt"
-              ? "O Oeste Local é um blog de lifestyle e uma rede de parceiros no Oeste de Portugal. Não vendemos tours. Contamos histórias e apresentamos as pessoas que fazem este território ser único."
-              : "Oeste Local is a lifestyle blog and a local partner network on Portugal's West Coast. We don't sell tours. We tell stories and introduce the people who make this territory unique."}
-          </p>
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">

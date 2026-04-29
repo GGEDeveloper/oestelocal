@@ -57,12 +57,22 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ s
           <p className="text-[11px] uppercase tracking-[0.2em] text-ink/55">A história</p>
           <p className="mt-4 font-serif-display text-[22px] md:text-[26px] leading-snug">{e.story.pt}</p>
 
-          <div className="mt-10 grid sm:grid-cols-2 gap-3">
-            <a className="btn-primary justify-center" href="https://wa.me/351000000000" target="_blank" rel="noopener">
-              Reservar pelo WhatsApp →
-            </a>
-            <Link href="/contacto" className="btn-ghost justify-center">
-              Pedir proposta personalizada
+          <div className={`mt-10 grid gap-3 ${partner ? "sm:grid-cols-2" : ""}`}>
+            {partner ? (
+              <a
+                className="btn-primary justify-center"
+                href={`https://instagram.com/${partner.instagram}`}
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram · {partner.name} →
+              </a>
+            ) : null}
+            <Link
+              href="/contacto"
+              className={`btn-ghost justify-center ${partner ? "" : "sm:col-span-2"}`}
+            >
+              Dica, história ou parceria →
             </Link>
           </div>
         </div>
@@ -76,10 +86,6 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ s
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-ink/55">Duração</dt>
               <dd className="mt-1">{e.duration.pt}</dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-[0.18em] text-ink/55">Grupo</dt>
-              <dd className="mt-1">{e.group.pt}</dd>
             </div>
             {dest && (
               <div>
@@ -105,8 +111,8 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ s
           </dl>
 
           <p className="mt-10 text-[13px] text-ink/55 leading-relaxed">
-            Sem custos escondidos. O preço inclui transporte porta-a-porta na região, curadoria personalizada e a
-            ligação direta ao parceiro local.
+            Texto editorial: não vendemos pacotes nem fazemos reservas por ti. Para marcar, combinar ou saber preços,
+            fala directamente com o parceiro — nós contamos a história e abrimos a porta da conversa.
           </p>
         </aside>
       </section>

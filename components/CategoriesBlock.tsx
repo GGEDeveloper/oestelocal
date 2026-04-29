@@ -16,7 +16,7 @@ export function CategoriesBlock() {
   return (
     <section className="container py-24 md:py-32">
       <div className="max-w-3xl">
-        <p className="pill">{lang === "pt" ? "Quatro maneiras de habitar o Oeste" : "Four ways to inhabit the West"}</p>
+        <p className="pill">{lang === "pt" ? "Quatro formas de estar no Oeste" : "Four ways to be in the West"}</p>
         <h2 className="mt-6 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
           {a}
           <br />

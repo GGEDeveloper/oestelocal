@@ -8,7 +8,7 @@ type Dict = { [k: string]: string | Dict };
 const dict: Record<Lang, Dict> = {
   pt: {
     nav: {
-      experiencias: "Descobrir",
+      experiencias: "Experiências",
       destinos: "Destinos",
       parceiros: "Parceiros",
       diario: "Diário",
@@ -17,7 +17,7 @@ const dict: Record<Lang, Dict> = {
     },
     cta: {
       primary: "Explorar o Oeste",
-      whatsapp: "Falar pelo WhatsApp",
+      whatsapp: "Falar connosco",
       instagram: "Ver no Instagram",
       explore: "Explorar",
       readMore: "Continuar a ler",
@@ -41,7 +41,7 @@ const dict: Record<Lang, Dict> = {
       mergulhar: { name: "Mergulhar", text: "Surf, ondas, oceano frio." },
       celebrar: { name: "Celebrar", text: "Concertos, festivais, mesas longas." },
     },
-    places: {
+    experiences: {
       title: "Momentos que ficam",
       lede:
         "Sítios que descobrimos. Pessoas que conhecemos. Histórias que valem a viagem.",
@@ -62,15 +62,15 @@ const dict: Record<Lang, Dict> = {
         "Conta-nos o que descobriste ou o que procuras. Parceiros, sítios, histórias — estamos aqui.",
       name: "Nome",
       email: "Email",
-      message: "O que tens em mente?",
+      message: "O que procuras?",
       send: "Enviar",
       sending: "A enviar…",
-      sent: "Recebido — respondemos em breve.",
+      sent: "Recebido — falamos contigo em breve.",
     },
     about: {
       title: "Sobre o Oeste Local",
       lede:
-        "Somos um blog de lifestyle e uma rede de parceiros locais no Oeste de Portugal. Descobrimos, escrevemos e apresentamos — o transporte fica ao teu critério, mas se precisares, temos uma app para isso.",
+        "Somos um blog de lifestyle sobre o Oeste de Portugal e uma rede leve de parceiros locais. Contamos histórias e damos a conhecer quem faz o território — marcações e combinações ficam sempre contigo e com eles, em conversa directa.",
     },
     footer: {
       tagline: "O Oeste que os guias deixam de fora.",
@@ -79,7 +79,7 @@ const dict: Record<Lang, Dict> = {
   },
   en: {
     nav: {
-      experiencias: "Discover",
+      experiencias: "Experiences",
       destinos: "Destinations",
       parceiros: "Partners",
       diario: "Journal",
@@ -88,7 +88,7 @@ const dict: Record<Lang, Dict> = {
     },
     cta: {
       primary: "Explore the West",
-      whatsapp: "Chat on WhatsApp",
+      whatsapp: "Talk to us",
       instagram: "See on Instagram",
       explore: "Explore",
       readMore: "Keep reading",
@@ -112,7 +112,7 @@ const dict: Record<Lang, Dict> = {
       mergulhar: { name: "Dive in", text: "Surf, swells, the cold Atlantic." },
       celebrar: { name: "Celebrate", text: "Concerts, festivals, long tables." },
     },
-    places: {
+    experiences: {
       title: "Moments worth the trip",
       lede:
         "Places we found. People we met. Stories that make you pack your bag.",
@@ -133,15 +133,15 @@ const dict: Record<Lang, Dict> = {
         "Tell us what you found or what you're looking for. Partners, places, stories — we're here.",
       name: "Name",
       email: "Email",
-      message: "What's on your mind?",
+      message: "What are you looking for?",
       send: "Send",
       sending: "Sending…",
-      sent: "Got it — we'll be in touch.",
+      sent: "Got it — we'll be in touch shortly.",
     },
     about: {
       title: "About Oeste Local",
       lede:
-        "We're a lifestyle blog and a network of local partners on Portugal's West Coast. We discover, write and introduce — transport is up to you, but if you need it, we have an app for that.",
+        "We're a lifestyle blog about Portugal's West Coast and a light network of local partners we work with closely. We tell stories and introduce the people who shape the territory — bookings and arrangements stay between you and them, directly.",
     },
     footer: {
       tagline: "The West Coast Portugal leaves off the map.",

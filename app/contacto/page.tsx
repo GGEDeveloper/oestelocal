@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Diz-nos quando vens. Tratamos de transporte, reservas e dos sítios certos para ti.",
+    "Partilha uma dica, uma história ou uma ideia de parceria. Respondemos por Instagram, email ou WhatsApp.",
 };
 
 export default function ContactPage() {
@@ -13,10 +13,10 @@ export default function ContactPage() {
       <div className="md:col-span-5">
         <p className="pill">Contacto</p>
         <h1 className="mt-6 font-display tracking-tighter2 text-fluid-h1 leading-[1]">
-          Diz-nos quando vens.
+          Conta-nos o que encontraste.
         </h1>
         <p className="mt-6 font-serif-display italic text-ocean-600 text-[20px]">
-          Respondemos em poucas horas — DM, WhatsApp ou email.
+          Parceiros, sítios, sugestões — respondemos em poucas horas por DM, WhatsApp ou email.
         </p>
         <ul className="mt-10 space-y-4 text-[15px]">
           <li>
