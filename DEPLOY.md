@@ -57,6 +57,7 @@ pm2 save
 
 Notas:
 - ⚠️ **`output: "standalone"` está activo no `next.config.ts`. Nunca usar `npm run start` nem `next start` em produção — usar sempre `node .next/standalone/server.js` com `PORT=3002`. Sempre copiar `.env.local` para `.next/standalone/.env.local` após cada build, caso contrário as variáveis de ambiente não ficam disponíveis em runtime.**
+- O comando **`npm run build`** corre **`next build`** e de seguida **`scripts/copy-standalone-assets.mjs`**, que copia **`.next/static`** e **`public/`** para dentro de **`.next/standalone/`**. Sem isto, o site serve HTML mas **`/_next/static/*` devolve 404** e a página fica “sem CSS” / desconfigurada.
 - A app deve responder localmente em `http://127.0.0.1:3002` e externamente via `https://oestelocal.gge.pt` (pelo tunnel).
 
 ---
@@ -93,6 +94,7 @@ sudo journalctl -u cloudflared-oestelocal.service -n 30 --no-pager
 
 Checklist rápido:
 - `curl -I http://127.0.0.1:3002` devolve **200/307/308** (depende de redirects do Next).
+- Um asset estático existe (ex.: `ls .next/standalone/.next/static/css/` e `curl -I http://127.0.0.1:3002/_next/static/css/<ficheiro>.css` deve dar **200**).
 - `pm2 show oestelocal` indica status **online**.
 - `systemctl status cloudflared-oestelocal.service` indica **active (running)**.
 
@@ -121,6 +123,7 @@ pm2 restart oestelocal
 cd /srv/projects/oestelocal
 npm ci
 npm run build
+cp .env.local .next/standalone/.env.local
 pm2 restart oestelocal
 ```
 
@@ -129,6 +132,24 @@ pm2 restart oestelocal
 ```bash
 curl -I http://127.0.0.1:3002
 ```
+
+### C) Site sem estilo / layout “partido” (CSS ou JS em 404)
+
+1. Confirma se os estáticos existem no standalone:
+
+```bash
+ls -la /srv/projects/oestelocal/.next/standalone/.next/static/css/
+ls -la /srv/projects/oestelocal/.next/standalone/public/ | head
+```
+
+2. Testa um ficheiro CSS real (o nome muda entre builds):
+
+```bash
+CSS=$(ls /srv/projects/oestelocal/.next/standalone/.next/static/css/*.css | head -1 | xargs basename)
+curl -I "http://127.0.0.1:3002/_next/static/css/$CSS"
+```
+
+- Se der **404**, o mais provável é ter corrido só `next build` à mão ou um build antigo: volta a correr **`npm run build`** (completo) e **`cp .env.local .next/standalone/.env.local`**, depois **`pm2 restart oestelocal`**.
 
 ### B) Tunnel down / `oestelocal.gge.pt` não responde
 
