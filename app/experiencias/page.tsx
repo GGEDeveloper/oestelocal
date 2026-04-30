@@ -19,7 +19,8 @@ export default function ExperiencesIndex() {
           <span className="font-serif-display italic text-ocean-600">um parceiro que conhecemos</span>.
         </h1>
         <p className="mt-6 text-ink/70 max-w-xl text-[16px] leading-relaxed">
-          Isto é arquivo editorial, não catálogo de pacotes. Filtra por categoria — ou segue o que te chama hoje.
+          Não é um catálogo — é um arquivo de lugares e pessoas. Filtra por categoria ou
+          segue o que te chama hoje.
         </p>
       </div>
       <Suspense fallback={<div className="mt-12 h-32" />}>

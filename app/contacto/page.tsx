@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Partilha uma dica, uma história ou uma ideia de parceria. Respondemos por Instagram, email ou WhatsApp.",
+    "Partilha uma dica, uma história ou uma ideia de parceria. Respondemos por Instagram ou email.",
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
           Conta-nos o que encontraste.
         </h1>
         <p className="mt-6 font-serif-display italic text-ocean-600 text-[20px]">
-          Parceiros, sítios, sugestões — respondemos em poucas horas por DM, WhatsApp ou email.
+          Parceiros, sítios, sugestões — respondemos sempre.
         </p>
         <ul className="mt-10 space-y-4 text-[15px]">
           <li>
@@ -29,8 +29,8 @@ export default function ContactPage() {
           <li>
             <span className="text-[11px] uppercase tracking-[0.18em] text-ink/55">WhatsApp</span>
             <br />
-            <a className="link-under" href="https://wa.me/351000000000" target="_blank" rel="noopener">
-              +351 000 000 000
+            <a className="link-under" href="https://wa.me/351961325834" target="_blank" rel="noopener">
+              +351 961 325 834
             </a>
           </li>
           <li>

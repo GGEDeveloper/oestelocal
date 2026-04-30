@@ -19,7 +19,7 @@ export default function PartnersIndex() {
           As pessoas <span className="font-serif-display italic text-sunset-600">por trás dos sítios</span>.
         </h1>
         <p className="mt-6 max-w-xl text-ink/70 text-[16px] leading-relaxed">
-          Não somos uma plataforma. Conhecemos cada parceiro pelo nome — e tu também vais conhecer.
+          Conhecemos cada um pelo nome — e tu também vais conhecer.
         </p>
       </section>
 

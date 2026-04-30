@@ -42,8 +42,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a className="link-under" href="https://wa.me/351000000000" target="_blank" rel="noopener">
-                WhatsApp
+              <a className="link-under" href="https://wa.me/351961325834" target="_blank" rel="noopener">
+                WhatsApp · +351 961 325 834
               </a>
             </li>
             <li>

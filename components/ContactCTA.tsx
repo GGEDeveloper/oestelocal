@@ -48,6 +48,14 @@ export function ContactCTA() {
             </Link>
             <a
               className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50/10"
+              href="https://wa.me/351961325834"
+              target="_blank"
+              rel="noopener"
+            >
+              {lang === "pt" ? "WhatsApp" : "WhatsApp"}
+            </a>
+            <a
+              className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50/10"
               href="https://instagram.com/oestelocal"
               target="_blank"
               rel="noopener"

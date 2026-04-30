@@ -70,7 +70,7 @@ export function Hero() {
           </Link>
           <a
             className="btn-ghost"
-            href="https://wa.me/351000000000"
+            href="https://wa.me/351961325834"
             target="_blank"
             rel="noopener"
           >
